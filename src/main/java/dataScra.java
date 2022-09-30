@@ -1,8 +1,13 @@
 import java.io.IOException;
+
+import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import java.lang.Process;
+import java.lang.ProcessBuilder;
 
 import java.time.Duration;
 
@@ -27,9 +32,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class dataScra {
 
 	static String mapshaku = "https://www.google.com/maps/place/";
+	static ProcessBuilder pr = new ProcessBuilder();
 
 
 	public static void asuntoScraper() throws Exception {
+		
 		String[] asunnot = {
 				"https://asunnot.oikotie.fi/vuokra-asunnot?pagination=1&locations=[[39,6,\"Espoo\"]]&price[max]=850&price[min]=690&roomCount[]=1&roomCount[]=2&roomCount[]=3&buildingType[]=1&buildingType[]=256&vendorType[]=private&cardType=101"
 		};
@@ -114,13 +121,14 @@ public class dataScra {
 
 
 			}while (x <= asunnot);
-
-			osoitteetDistanEst(osoitteet);
-			/*for(String osoite : osoitteet) {
+			TimeUnit.SECONDS.sleep(1);
+			
+			for(String osoite : osoitteet) {
 						//DistanceEst.APIposter(osoite);
-						osoitteetDistanEst(osoitteet);
+						//osoitteetDistanEst(osoitteet);
+						osoitteetDistanEst(osoite);
 						//System.out.println(osoite);
-						}*/
+						}
 
 		}
 
@@ -132,28 +140,38 @@ public class dataScra {
 			System.out.println(err);
 
 		}
+		
 
 	}
-	public static void osoitteetDistanEst(List<String> osoitteet) {
+	public static void osoitteetDistanEst(String osoite) throws IOException, InterruptedException {
 
-		WebDriver driver2 = new ChromeDriver();
-		StringBuilder osoiteyhdistaja = new StringBuilder();
-		try {
+		//WebDriver driver2 = new ChromeDriver();
+		//Runtime rt = Runtime.getRuntime();
+		
+		Response response = Jsoup.connect(mapshaku + osoite + ",Espoo").followRedirects(true).execute();
+		System.out.println(response.url());
+		//pr.command("C:\\Program Files\\Mozilla Firefox\\firefox.exe", mapshaku + osoite + ",Espoo");
+		//pr.start();
+		TimeUnit.SECONDS.sleep(2);
+		System.out.println(osoite);
+		//StringBuilder osoiteyhdistaja = new StringBuilder();
+		
+		/*try {
 
-
-			ChromeOptions options = new ChromeOptions();
-			
 
 			for(String osoite : osoitteet) {
-
 				
-				driver2.get(mapshaku + osoite + "Espoo");
-				driver2.navigate().to(mapshaku + osoite + "Espoo");
-
+				
+				
+				//System.out.println("dfsdf");
+				pr.command("C:\\Program Files\\Mozilla Firefox\\firefox.exe", "hello");//, "Espoo"
+				
+				
+				
 				System.out.println(osoite);
 				TimeUnit.SECONDS.sleep(3);
-				String urlkordinaateilla = driver2.getCurrentUrl();
-				System.out.println(urlkordinaateilla);
+				
+				//System.out.println(urlkordinaateilla);
 
 			}
 
@@ -164,12 +182,11 @@ public class dataScra {
 		}
 		finally {
 
-			driver2.quit();
-		}
+			System.out.println("Finally");
+		}*/
 
 
 
 
 	}
-
 }
