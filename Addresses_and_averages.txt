@@ -1,0 +1,636 @@
+Destination:Kolkekannaksentie+19
+Avg.time duration:21.2
+Busses amount:1
+Cumulated minutes:106.0
+Weighted number:0.2
+
+Destination:hauenkalliontie+8
+Avg.time duration:82.75
+Busses amount:2
+Cumulated minutes:331.0
+Weighted number:0.25
+
+Destination:Huvilinnanmäki+8
+Avg.time duration:42.0
+Busses amount:1
+Cumulated minutes:210.0
+Weighted number:0.2
+
+Destination:Kuusikallionkuja+4
+Avg.time duration:60.8
+Busses amount:1
+Cumulated minutes:304.0
+Weighted number:0.2
+
+Destination:Tornihaukantie+8
+Avg.time duration:36.8
+Busses amount:1
+Cumulated minutes:184.0
+Weighted number:0.2
+
+Destination:Myötätuulenmäki+3
+Avg.time duration:86.8
+Busses amount:3
+Cumulated minutes:434.0
+Weighted number:0.2
+
+Destination:Sateentie+4
+Avg.time duration:85.5
+Busses amount:3
+Cumulated minutes:342.0
+Weighted number:0.25
+
+Destination:Soukankaari+1
+Avg.time duration:77.2
+Busses amount:3
+Cumulated minutes:386.0
+Weighted number:0.19999999
+
+Destination:Amiraalinpuistotie+12
+Avg.time duration:77.2
+Busses amount:3
+Cumulated minutes:386.0
+Weighted number:0.19999999
+
+Destination:Nihtisillankuja+2
+Avg.time duration:71.0
+Busses amount:1
+Cumulated minutes:142.0
+Weighted number:0.5
+
+Destination:Amiraalinpuistotie+10
+Avg.time duration:77.2
+Busses amount:1
+Cumulated minutes:386.0
+Weighted number:0.19999999
+
+Destination:Puolikkotie+6
+Avg.time duration:59.2
+Busses amount:1
+Cumulated minutes:296.0
+Weighted number:0.2
+
+Destination:Ullanmäentie+7
+Avg.time duration:50.2
+Busses amount:2
+Cumulated minutes:251.0
+Weighted number:0.2
+
+Destination:Patruunakatu+6
+Avg.time duration:54.6
+Busses amount:1
+Cumulated minutes:273.0
+Weighted number:0.19999999
+
+Destination:Pohjantie+8
+Avg.time duration:54.6
+Busses amount:2
+Cumulated minutes:273.0
+Weighted number:0.19999999
+
+Destination:Niittykummuntie+12
+Avg.time duration:69.0
+Busses amount:2
+Cumulated minutes:276.0
+Weighted number:0.25
+
+Destination:Lansankallionkuja+2
+Avg.time duration:49.4
+Busses amount:2
+Cumulated minutes:247.0
+Weighted number:0.2
+
+Destination:Nokitontunkuja+1
+Avg.time duration:53.0
+Busses amount:2
+Cumulated minutes:106.0
+Weighted number:0.5
+
+Destination:ingaksenmäki+2
+Avg.time duration:33.4
+Busses amount:2
+Cumulated minutes:167.0
+Weighted number:0.2
+
+Destination:Mäkkylänpolku+4
+Avg.time duration:59.0
+Busses amount:3
+Cumulated minutes:295.0
+Weighted number:0.2
+
+Destination:Aapelinkatu+9
+Avg.time duration:64.0
+Busses amount:2
+Cumulated minutes:192.0
+Weighted number:0.33333334
+
+Destination:Espoonlahdenkatu+4
+Avg.time duration:68.2
+Busses amount:1
+Cumulated minutes:341.0
+Weighted number:0.19999999
+
+Destination:Ankkuritie+5
+Avg.time duration:73.5
+Busses amount:1
+Cumulated minutes:294.0
+Weighted number:0.25
+
+Destination:Harakantie+20
+Avg.time duration:41.6
+Busses amount:1
+Cumulated minutes:208.0
+Weighted number:0.19999999
+
+Destination:Hauenkalliontie+6
+Avg.time duration:83.0
+Busses amount:3
+Cumulated minutes:415.0
+Weighted number:0.2
+
+Destination:Sateenkaari+3
+Avg.time duration:73.4
+Busses amount:3
+Cumulated minutes:367.0
+Weighted number:0.2
+
+Destination:Meripoiju+3
+Avg.time duration:68.6
+Busses amount:3
+Cumulated minutes:343.0
+Weighted number:0.2
+
+Destination:Klippinkitie+7
+Avg.time duration:59.5
+Busses amount:3
+Cumulated minutes:238.0
+Weighted number:0.25
+
+Destination:Kipparinkuja+2
+Avg.time duration:59.5
+Busses amount:3
+Cumulated minutes:238.0
+Weighted number:0.25
+
+Destination:Iivisniemenaukio+2
+Avg.time duration:77.8
+Busses amount:3
+Cumulated minutes:389.0
+Weighted number:0.2
+
+Destination:Nokitontunkuja+3
+Avg.time duration:56.666668
+Busses amount:3
+Cumulated minutes:170.0
+Weighted number:0.33333334
+
+Destination:Alalinnake+1
+Avg.time duration:56.666668
+Busses amount:3
+Cumulated minutes:170.0
+Weighted number:0.33333334
+
+Destination:Karakalliontie+3
+Avg.time duration:33.2
+Busses amount:3
+Cumulated minutes:166.0
+Weighted number:0.2
+
+Destination:Kirstinmäki+1
+Avg.time duration:39.2
+Busses amount:2
+Cumulated minutes:196.0
+Weighted number:0.2
+
+Destination:LindaTannerinkuja+1
+Avg.time duration:39.2
+Busses amount:2
+Cumulated minutes:196.0
+Weighted number:0.2
+
+Destination:Linjaloistonkatu+3
+Avg.time duration:89.6
+Busses amount:2
+Cumulated minutes:448.0
+Weighted number:0.2
+
+Destination:Aallontaite+3
+Avg.time duration:68.4
+Busses amount:2
+Cumulated minutes:342.0
+Weighted number:0.2
+
+Destination:Vallikallionkuja+1
+Avg.time duration:55.8
+Busses amount:2
+Cumulated minutes:279.0
+Weighted number:0.2
+
+Destination:VanhaTuruntie+45
+Avg.time duration:55.8
+Busses amount:2
+Cumulated minutes:279.0
+Weighted number:0.2
+
+Destination:Piispankallio+4
+Avg.time duration:61.8
+Busses amount:2
+Cumulated minutes:309.0
+Weighted number:0.2
+
+Destination:Kipparinkatu+4
+Avg.time duration:69.4
+Busses amount:3
+Cumulated minutes:347.0
+Weighted number:0.2
+
+Destination:Rauhalanpuisto+6
+Avg.time duration:66.2
+Busses amount:2
+Cumulated minutes:331.0
+Weighted number:0.19999999
+
+Destination:Jousenpuistonkatu+2
+Avg.time duration:52.0
+Busses amount:3
+Cumulated minutes:104.0
+Weighted number:0.5
+
+Destination:Kalasääksentie+3
+Avg.time duration:41.6
+Busses amount:2
+Cumulated minutes:208.0
+Weighted number:0.19999999
+
+Destination:Pohjantie+2
+Avg.time duration:58.2
+Busses amount:2
+Cumulated minutes:291.0
+Weighted number:0.2
+
+Destination:Jousenkaari+11
+Avg.time duration:61.0
+Busses amount:2
+Cumulated minutes:244.0
+Weighted number:0.25
+
+Destination:Hakakuja+2
+Avg.time duration:61.0
+Busses amount:2
+Cumulated minutes:244.0
+Weighted number:0.25
+
+Destination:HakakujaHakakuja+2
+Avg.time duration:61.0
+Busses amount:3
+Cumulated minutes:244.0
+Weighted number:0.25
+
+Destination:HakakujaHakakujaHakakuja+2
+Avg.time duration:61.0
+Busses amount:2
+Cumulated minutes:244.0
+Weighted number:0.25
+
+Destination:Pitkänkalliontie+11
+Avg.time duration:86.25
+Busses amount:3
+Cumulated minutes:345.0
+Weighted number:0.25
+
+Destination:Sepontie+3
+Avg.time duration:62.6
+Busses amount:2
+Cumulated minutes:313.0
+Weighted number:0.19999999
+
+Destination:Vieraskuja+3
+Avg.time duration:31.2
+Busses amount:2
+Cumulated minutes:156.0
+Weighted number:0.2
+
+Destination:Metsänpojankuja+7
+Avg.time duration:58.0
+Busses amount:2
+Cumulated minutes:232.0
+Weighted number:0.25
+
+Destination:Solmukuja+3
+Avg.time duration:74.4
+Busses amount:2
+Cumulated minutes:372.0
+Weighted number:0.2
+
+Destination:Ruutikellarintie+1
+Avg.time duration:53.4
+Busses amount:2
+Cumulated minutes:267.0
+Weighted number:0.2
+
+Destination:Jousenpuistonkatu+3
+Avg.time duration:53.0
+Busses amount:3
+Cumulated minutes:106.0
+Weighted number:0.5
+
+Destination:Sininärhentie+3
+Avg.time duration:49.0
+Busses amount:3
+Cumulated minutes:147.0
+Weighted number:0.33333334
+
+Destination:Niittykatu+1
+Avg.time duration:69.8
+Busses amount:3
+Cumulated minutes:349.0
+Weighted number:0.2
+
+Destination:Mestarinkatu+5
+Avg.time duration:46.6
+Busses amount:2
+Cumulated minutes:233.0
+Weighted number:0.19999999
+
+Destination:Leppävaarankatu+7
+Avg.time duration:36.0
+Busses amount:2
+Cumulated minutes:180.0
+Weighted number:0.2
+
+Destination:Syvänsalmenkatu+3
+Avg.time duration:71.6
+Busses amount:1
+Cumulated minutes:358.0
+Weighted number:0.2
+
+Destination:Kotikyläntie+7
+Avg.time duration:71.6
+Busses amount:2
+Cumulated minutes:358.0
+Weighted number:0.2
+
+Destination:Kulovalkeantie+14
+Avg.time duration:49.2
+Busses amount:1
+Cumulated minutes:246.0
+Weighted number:0.2
+
+Destination:Runoratsunkatu+3
+Avg.time duration:45.333332
+Busses amount:2
+Cumulated minutes:136.0
+Weighted number:0.3333333
+
+Destination:Linnustajankuja+3
+Avg.time duration:28.0
+Busses amount:1
+Cumulated minutes:112.0
+Weighted number:0.25
+
+Destination:Akselinpolku+7
+Avg.time duration:65.2
+Busses amount:1
+Cumulated minutes:326.0
+Weighted number:0.19999999
+
+Destination:Merivirta+14
+Avg.time duration:66.8
+Busses amount:2
+Cumulated minutes:334.0
+Weighted number:0.2
+
+Destination:Matinkatu+24
+Avg.time duration:66.6
+Busses amount:1
+Cumulated minutes:333.0
+Weighted number:0.19999999
+
+Destination:Mimerkinkuja+3
+Avg.time duration:66.6
+Busses amount:2
+Cumulated minutes:333.0
+Weighted number:0.19999999
+
+Destination:Ruorimiehenkatu+6
+Avg.time duration:77.4
+Busses amount:1
+Cumulated minutes:387.0
+Weighted number:0.2
+
+Destination:Reviisorinkatu+8
+Avg.time duration:77.4
+Busses amount:3
+Cumulated minutes:387.0
+Weighted number:0.2
+
+Destination:Komentajankatu+8
+Avg.time duration:47.6
+Busses amount:2
+Cumulated minutes:238.0
+Weighted number:0.19999999
+
+Destination:Anjankuja+2
+Avg.time duration:65.6
+Busses amount:2
+Cumulated minutes:328.0
+Weighted number:0.19999999
+
+Destination:Mainikitie+9
+Avg.time duration:65.6
+Busses amount:2
+Cumulated minutes:328.0
+Weighted number:0.19999999
+
+Destination:Ylismäentie+12
+Avg.time duration:54.75
+Busses amount:2
+Cumulated minutes:219.0
+Weighted number:0.25
+
+Destination:Kilonportti+2
+Avg.time duration:38.0
+Busses amount:2
+Cumulated minutes:190.0
+Weighted number:0.2
+
+Destination:Niittykuja+2
+Avg.time duration:71.0
+Busses amount:2
+Cumulated minutes:355.0
+Weighted number:0.2
+
+Destination:Marinportti+6
+Avg.time duration:80.2
+Busses amount:2
+Cumulated minutes:401.0
+Weighted number:0.19999999
+
+Destination:Ylistörmä+5
+Avg.time duration:60.4
+Busses amount:2
+Cumulated minutes:302.0
+Weighted number:0.2
+
+Destination:Hauenkalliontie+4
+Avg.time duration:83.25
+Busses amount:3
+Cumulated minutes:333.0
+Weighted number:0.25
+
+Destination:Sepetlahdentie+1
+Avg.time duration:61.0
+Busses amount:2
+Cumulated minutes:244.0
+Weighted number:0.25
+
+Destination:Ahvenevä+1
+Avg.time duration:84.75
+Busses amount:1
+Cumulated minutes:339.0
+Weighted number:0.25
+
+Destination:Mirjankuja+3
+Avg.time duration:65.2
+Busses amount:1
+Cumulated minutes:326.0
+Weighted number:0.19999999
+
+Destination:sininärhentie+3
+Avg.time duration:49.0
+Busses amount:2
+Cumulated minutes:147.0
+Weighted number:0.33333334
+
+Destination:Iivisniemenkuja+4
+Avg.time duration:75.5
+Busses amount:2
+Cumulated minutes:302.0
+Weighted number:0.25
+
+Destination:Honkavaarankuja+1
+Avg.time duration:31.4
+Busses amount:1
+Cumulated minutes:157.0
+Weighted number:0.2
+
+Destination:Vallikatu+5
+Avg.time duration:52.75
+Busses amount:3
+Cumulated minutes:211.0
+Weighted number:0.25
+
+Destination:Postipuuntie+2
+Avg.time duration:43.0
+Busses amount:2
+Cumulated minutes:172.0
+Weighted number:0.25
+
+Destination:Merenkulkijankatu+3
+Avg.time duration:43.0
+Busses amount:2
+Cumulated minutes:172.0
+Weighted number:0.25
+
+Destination:Yläkartanontie+18
+Avg.time duration:75.2
+Busses amount:2
+Cumulated minutes:376.0
+Weighted number:0.19999999
+
+Destination:Linjaloistonkatu+7
+Avg.time duration:89.5
+Busses amount:1
+Cumulated minutes:358.0
+Weighted number:0.25
+
+Destination:Leilankuja+4
+Avg.time duration:89.5
+Busses amount:2
+Cumulated minutes:358.0
+Weighted number:0.25
+
+Destination:Soukantie+14
+Avg.time duration:74.2
+Busses amount:2
+Cumulated minutes:371.0
+Weighted number:0.19999999
+
+Destination:Tyyrpuuri+2
+Avg.time duration:80.5
+Busses amount:2
+Cumulated minutes:322.0
+Weighted number:0.25
+
+Destination:Reviisorinkatu+10
+Avg.time duration:37.2
+Busses amount:2
+Cumulated minutes:186.0
+Weighted number:0.2
+
+Destination:Kylävainiontie+11
+Avg.time duration:47.6
+Busses amount:2
+Cumulated minutes:238.0
+Weighted number:0.19999999
+
+Destination:Multahaankuja+5
+Avg.time duration:37.0
+Busses amount:2
+Cumulated minutes:185.0
+Weighted number:0.2
+
+Destination:Mäntyviita+4
+Avg.time duration:37.0
+Busses amount:2
+Cumulated minutes:185.0
+Weighted number:0.2
+
+Destination:Yläkartanonkuja+5
+Avg.time duration:73.0
+Busses amount:2
+Cumulated minutes:365.0
+Weighted number:0.2
+
+Destination:Joupinpuisto+1
+Avg.time duration:55.6
+Busses amount:2
+Cumulated minutes:278.0
+Weighted number:0.19999999
+
+Destination:Menninkäisentie+5
+Avg.time duration:55.6
+Busses amount:2
+Cumulated minutes:278.0
+Weighted number:0.19999999
+
+Destination:Maininkitie+9
+Avg.time duration:69.2
+Busses amount:2
+Cumulated minutes:346.0
+Weighted number:0.19999999
+
+Destination:Linjaloistonkatu+5
+Avg.time duration:404.0
+Busses amount:2
+Cumulated minutes:0.0
+Weighted number:Infinity
+
+Destination:Niittykallio+2
+Avg.time duration:76.6
+Busses amount:1
+Cumulated minutes:383.0
+Weighted number:0.2
+
+Destination:Niittyportinpolku+4
+Avg.time duration:69.5
+Busses amount:2
+Cumulated minutes:139.0
+Weighted number:0.5
+
+Destination:Sammalkallionkuja+2
+Avg.time duration:58.8
+Busses amount:1
+Cumulated minutes:294.0
+Weighted number:0.2
+
