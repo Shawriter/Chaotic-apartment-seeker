@@ -46,9 +46,9 @@ public class dataScra {
 			List<WebElement> asunlista = driver.findElements(By.xpath("//a[@ng-href]"));
 			
 
-			int add = 1; //Object calculator
+			int add = 1; 
 			for(WebElement i : asunlista) {
-				add += 1; //Object calculator
+				add += 1; 
 				String asunto = i.getAttribute("textContent");
 				String asunto2 = asunto.replaceAll("\\s+","");
 				//System.out.println(asunto2);
@@ -110,12 +110,7 @@ public class dataScra {
 			s++;
 		}
 		driver_2.quit();
-		/*for(String osoite : osoitteet) {
-			//DistanceEst.APIposter(osoite);
-			//osoitteetDistanEst(osoitteet);
-			//osoitteetDistanEst(osoite);
-			System.out.println(osoite);
-		}*/
+	
 		osoitteetDistanEst();
 		
 		
@@ -131,7 +126,7 @@ public class dataScra {
 
 			float x = 1; 
 			
-			// Using two loops nested inside do while, time complexity of isLetter and isDigit not given.
+			// Using two loops nested inside do while
 			// Because of two separate for loops, one getting the chars and other the digits - had to divide the main do while loop by incrementing x by 2 in the for loops simple solution
 			do {
 				for(char a : karakterArray) {
@@ -221,14 +216,11 @@ public class dataScra {
 					Googlereader.close();
 	
 					String googlemapsresponse2 = responseContent.toString();
-					//System.out.println(googlemapsresponse2);
-					//System.out.println(osoite);
+					
 					String[] kordinaatisto = regexFinder(googlemapsresponse2);
-					//System.out.println(kordinaatit);
+					
 					int osoitteetlength = osoitteet.size();
-					//System.out.println(osoitteetlength);
-					//System.out.println(osoite);
-
+					
 					if(kordinaatisto !=null) {
 						DistanceEst.APIposter(osoite, kordinaatisto, osoitteet);
 					
@@ -269,8 +261,6 @@ public class dataScra {
 			String kordinaatti2 = koo1[1].toString();
 			String kordinaatti2_2_2 = kordinaatti2.substring(0,9);
 
-			//System.out.println(kordinaatti1_1_1);
-			//System.out.println(kordinaatti2_2_2);
 			String[] kordinaatit = {kordinaatti1_1_1, kordinaatti2_2_2};
 			
 			return kordinaatit;
