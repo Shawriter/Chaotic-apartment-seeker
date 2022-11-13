@@ -10,13 +10,14 @@ class ExcelWriterAndManip:
         self.minutes = minutes
         self.cumulated_minutes = cumulated_minutes
 
-    def writetoexcel(self, flist):
+    def writetoexcel(self):
 
         try:
             df = pd.DataFrame(list(zip(self.address, self.minutes,
                                        self.cumulated_minutes)),
                               columns=['Address', 'Avg.Minutes',
                                        'Cumulated minutes'])
+            # print(self.address, self.minutes, self.cumulated_minutes)
             df.to_excel(self.filename+'.xlsx',
                         index_label="Nro",
                         merge_cells=False, encoding='utf-8')

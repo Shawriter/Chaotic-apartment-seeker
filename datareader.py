@@ -52,6 +52,7 @@ def readfile(minutesarvo):
 
     bool = 0
     minbool = 0.0
+    arvocalc = 0
     m = float(minutesarvo)
     n = 1
     n2 = 1
@@ -79,12 +80,17 @@ def readfile(minutesarvo):
     for arvo in osoitedict.values():
 
         try:
-            if float(arvo):
-                if (float(arvo) < m):
+            arvotofloat = float(arvo)
+            if arvotofloat:
+                if (arvocalc == 1):
+                    arvocalc += 1
+                    print(arvocalc)
+                    avgmin_list_2.append(osoitedict.get("Avg.time1"))
+                if (arvotofloat <= m):
                     avgmin_list_2.append(arvo)
                     minbool == arvo
 
-                if (float(arvo) > m):
+                if (arvotofloat > 100):
                     minbool == arvo
                     cumulatedmin_list_3.append(arvo)
 
@@ -92,10 +98,11 @@ def readfile(minutesarvo):
             if (minbool < 1) and (bool != 1):
                 bool = 1
             if isinstance(minbool, float):
+                arvocalc += 1
                 osoite_list_1.append(arvo)
 
             continue
-
+    print(cumulatedmin_list_3)
     addtofinal_list(osoite_list_1, avgmin_list_2, cumulatedmin_list_3)
 
 
@@ -109,7 +116,7 @@ for txt:")
             answer_2 = input("Name the file:")
             xlsfile = toexcel.ExcelWriterAndManip(answer_2, addrs, avgmins,
                                                   cumulated)
-            xlsfile.writetoexcel(flist)
+            xlsfile.writetoexcel()
             print("File " + answer_2 + ".xls saved")
         elif answer == "t":
             answer_2 = input("Name the file:")
