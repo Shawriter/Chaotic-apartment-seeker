@@ -17,9 +17,9 @@ class ExcelWriterAndManip:
                                        self.cumulated_minutes)),
                               columns=['Address', 'Avg.Minutes',
                                        'Cumulated minutes'])
-            df.to_excel(self.filename + ".xlsx",
+            df.to_excel(self.filename+'.xlsx',
                         index_label="Nro",
-                        merge_cells=False)
+                        merge_cells=False, encoding='utf-8')
 
         except Exception as e:
             raise e

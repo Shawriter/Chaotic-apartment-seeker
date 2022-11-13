@@ -103,7 +103,7 @@ def write_to_file(flist, addrs, avgmins, cumulated):
 
     try:
         answer = input("Save the final file as and .xls or .txt file? 'x' for xls 't' \
-        for txt:")
+for txt:")
 
         if answer == "x":
             answer_2 = input("Name the file:")
@@ -117,7 +117,7 @@ def write_to_file(flist, addrs, avgmins, cumulated):
                 with open(answer_2 + ".txt", 'w+') as txtfile:
                     for txtline in flist:
                         txtfile.write(txtline)
-                        print("File " + answer_2 + ".txt saved")
+                print("File " + answer_2 + ".txt saved")
             except Exception as e:
                 print(e)
                 return 0
