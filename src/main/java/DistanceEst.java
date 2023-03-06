@@ -2,14 +2,13 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
+
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.http.HttpClient;
 
 import java.nio.charset.StandardCharsets;
 
@@ -58,12 +57,12 @@ public class DistanceEst {
 			connection.setDoOutput(true);
 			connection.setRequestProperty("Content-Type","application/json");
 			connection.setRequestProperty("Accept", "application/json");
-			//JSON PAYLOAD REPLACE THE DATE AND TIME WITH A FUTURE TIME ALSO REPLACE toPlace ADDRESS LINES WITH YOUR DESTINATION AND COORDINATES
-			String payload = "{\r\n"
+			//JSON PAYLOAD REPLACE THE DATE AND TIME WITH A FUTURE TIME ALSO REPLACE toPlace ADDRESS LINES WITH YOUR DESTINATION AND COORDINATES //Old payload deprecated
+			String payload = "{\r\n" 
 					+ "    \"id\": \"queryUtils_SummaryPage_Query\",\r\n"
 					+ "    \"query\": \"query queryUtils_SummaryPage_Query(\\n  $fromPlace: String!\\n  $toPlace: String!\\n  $intermediatePlaces: [InputCoordinates!]\\n  $numItineraries: Int!\\n  $modes: [TransportMode!]\\n  $date: String!\\n  $time: String!\\n  $walkReluctance: Float\\n  $walkBoardCost: Int\\n  $minTransferTime: Int\\n  $walkSpeed: Float\\n  $maxWalkDistance: Float\\n  $wheelchair: Boolean\\n  $ticketTypes: [String]\\n  $disableRemainingWeightHeuristic: Boolean\\n  $arriveBy: Boolean\\n  $transferPenalty: Int\\n  $bikeSpeed: Float\\n  $optimize: OptimizeType\\n  $itineraryFiltering: Float\\n  $unpreferred: InputUnpreferred\\n  $allowedBikeRentalNetworks: [String]\\n  $locale: String\\n) {\\n  viewer {\\n    ...SummaryPage_viewer_3rqNOH\\n  }\\n  serviceTimeRange {\\n    ...SummaryPage_serviceTimeRange\\n  }\\n}\\n\\nfragment ItineraryLine_legs on Leg {\\n  mode\\n  rentedBike\\n  startTime\\n  endTime\\n  distance\\n  legGeometry {\\n    points\\n  }\\n  transitLeg\\n  interlineWithPreviousLeg\\n  route {\\n    shortName\\n    color\\n    type\\n    agency {\\n      name\\n      id\\n    }\\n    id\\n  }\\n  from {\\n    lat\\n    lon\\n    name\\n    vertexType\\n    bikeRentalStation {\\n      lat\\n      lon\\n      stationId\\n      networks\\n      bikesAvailable\\n      id\\n    }\\n    stop {\\n      gtfsId\\n      code\\n      platformCode\\n      id\\n    }\\n  }\\n  to {\\n    lat\\n    lon\\n    name\\n    vertexType\\n    bikeRentalStation {\\n      lat\\n      lon\\n      stationId\\n      networks\\n      bikesAvailable\\n      id\\n    }\\n    stop {\\n      gtfsId\\n      code\\n      platformCode\\n      id\\n    }\\n  }\\n  trip {\\n    stoptimes {\\n      stop {\\n        gtfsId\\n        id\\n      }\\n      pickupType\\n    }\\n    id\\n  }\\n  intermediatePlaces {\\n    arrivalTime\\n    stop {\\n      gtfsId\\n      lat\\n      lon\\n      name\\n      code\\n      platformCode\\n      id\\n    }\\n  }\\n}\\n\\nfragment ItinerarySummaryListContainer_itineraries on Itinerary {\\n  walkDistance\\n  startTime\\n  endTime\\n  legs {\\n    realTime\\n    realtimeState\\n    transitLeg\\n    startTime\\n    endTime\\n    mode\\n    distance\\n    duration\\n    rentedBike\\n    interlineWithPreviousLeg\\n    intermediatePlace\\n    intermediatePlaces {\\n      stop {\\n        zoneId\\n        id\\n      }\\n    }\\n    route {\\n      mode\\n      shortName\\n      type\\n      color\\n      agency {\\n        name\\n        id\\n      }\\n      alerts {\\n        alertSeverityLevel\\n        effectiveEndDate\\n        effectiveStartDate\\n        trip {\\n          pattern {\\n            code\\n            id\\n          }\\n          id\\n        }\\n        id\\n      }\\n      id\\n    }\\n    trip {\\n      pattern {\\n        code\\n        id\\n      }\\n      stoptimes {\\n        realtimeState\\n        stop {\\n          gtfsId\\n          id\\n        }\\n        pickupType\\n      }\\n      id\\n    }\\n    from {\\n      name\\n      lat\\n      lon\\n      stop {\\n        gtfsId\\n        zoneId\\n        platformCode\\n        alerts {\\n          alertSeverityLevel\\n          effectiveEndDate\\n          effectiveStartDate\\n          id\\n        }\\n        id\\n      }\\n      bikeRentalStation {\\n        bikesAvailable\\n        networks\\n        id\\n      }\\n    }\\n    to {\\n      stop {\\n        gtfsId\\n        zoneId\\n        alerts {\\n          alertSeverityLevel\\n          effectiveEndDate\\n          effectiveStartDate\\n          id\\n        }\\n        id\\n      }\\n      bikePark {\\n        bikeParkId\\n        name\\n        id\\n      }\\n      carPark {\\n        carParkId\\n        name\\n        id\\n      }\\n    }\\n  }\\n}\\n\\nfragment ItineraryTab_itinerary on Itinerary {\\n  walkDistance\\n  duration\\n  startTime\\n  endTime\\n  fares {\\n    cents\\n    components {\\n      cents\\n      fareId\\n      routes {\\n        agency {\\n          gtfsId\\n          fareUrl\\n          name\\n          id\\n        }\\n        gtfsId\\n        id\\n      }\\n    }\\n    type\\n  }\\n  legs {\\n    mode\\n    ...LegAgencyInfo_leg\\n    from {\\n      lat\\n      lon\\n      name\\n      vertexType\\n      bikePark {\\n        bikeParkId\\n        name\\n        id\\n      }\\n      bikeRentalStation {\\n        networks\\n        bikesAvailable\\n        lat\\n        lon\\n        stationId\\n        id\\n      }\\n      stop {\\n        gtfsId\\n        code\\n        platformCode\\n        vehicleMode\\n        zoneId\\n        alerts {\\n          alertSeverityLevel\\n          effectiveEndDate\\n          effectiveStartDate\\n          trip {\\n            pattern {\\n              code\\n              id\\n            }\\n            id\\n          }\\n          alertHeaderText\\n          alertHeaderTextTranslations {\\n            text\\n            language\\n          }\\n          alertDescriptionText\\n          alertDescriptionTextTranslations {\\n            text\\n            language\\n          }\\n          alertUrl\\n          alertUrlTranslations {\\n            text\\n            language\\n          }\\n          id\\n        }\\n        id\\n      }\\n    }\\n    to {\\n      lat\\n      lon\\n      name\\n      vertexType\\n      bikeRentalStation {\\n        lat\\n        lon\\n        stationId\\n        networks\\n        bikesAvailable\\n        id\\n      }\\n      stop {\\n        gtfsId\\n        code\\n        platformCode\\n        zoneId\\n        name\\n        vehicleMode\\n        alerts {\\n          alertSeverityLevel\\n          effectiveEndDate\\n          effectiveStartDate\\n          trip {\\n            pattern {\\n              code\\n              id\\n            }\\n            id\\n          }\\n          alertHeaderText\\n          alertHeaderTextTranslations {\\n            text\\n            language\\n          }\\n          alertDescriptionText\\n          alertDescriptionTextTranslations {\\n            text\\n            language\\n          }\\n          alertUrl\\n          alertUrlTranslations {\\n            text\\n            language\\n          }\\n          id\\n        }\\n        id\\n      }\\n      bikePark {\\n        bikeParkId\\n        name\\n        id\\n      }\\n      carPark {\\n        carParkId\\n        name\\n        id\\n      }\\n    }\\n    legGeometry {\\n      length\\n      points\\n    }\\n    intermediatePlaces {\\n      arrivalTime\\n      stop {\\n        gtfsId\\n        lat\\n        lon\\n        name\\n        code\\n        platformCode\\n        zoneId\\n        id\\n      }\\n    }\\n    realTime\\n    realtimeState\\n    transitLeg\\n    rentedBike\\n    startTime\\n    endTime\\n    interlineWithPreviousLeg\\n    distance\\n    duration\\n    intermediatePlace\\n    route {\\n      shortName\\n      color\\n      gtfsId\\n      type\\n      longName\\n      desc\\n      agency {\\n        gtfsId\\n        fareUrl\\n        name\\n        phone\\n        id\\n      }\\n      alerts {\\n        alertSeverityLevel\\n        effectiveEndDate\\n        effectiveStartDate\\n        trip {\\n          pattern {\\n            code\\n            id\\n          }\\n          id\\n        }\\n        alertHeaderText\\n        alertHeaderTextTranslations {\\n          text\\n          language\\n        }\\n        alertDescriptionText\\n        alertDescriptionTextTranslations {\\n          text\\n          language\\n        }\\n        alertUrl\\n        alertUrlTranslations {\\n          text\\n          language\\n        }\\n        id\\n      }\\n      id\\n    }\\n    trip {\\n      gtfsId\\n      tripHeadsign\\n      pattern {\\n        code\\n        id\\n      }\\n      stoptimesForDate {\\n        headsign\\n        pickupType\\n        realtimeState\\n        stop {\\n          gtfsId\\n          id\\n        }\\n      }\\n      id\\n    }\\n  }\\n}\\n\\nfragment ItineraryTab_plan on Plan {\\n  date\\n}\\n\\nfragment LegAgencyInfo_leg on Leg {\\n  agency {\\n    name\\n    url\\n    fareUrl\\n    id\\n  }\\n}\\n\\nfragment RouteLine_pattern on Pattern {\\n  code\\n  geometry {\\n    lat\\n    lon\\n  }\\n  route {\\n    mode\\n    type\\n    color\\n    id\\n  }\\n  stops {\\n    lat\\n    lon\\n    name\\n    gtfsId\\n    platformCode\\n    code\\n    ...StopCardHeaderContainer_stop\\n    id\\n  }\\n}\\n\\nfragment StopCardHeaderContainer_stop on Stop {\\n  gtfsId\\n  name\\n  code\\n  desc\\n  zoneId\\n  alerts {\\n    alertSeverityLevel\\n    effectiveEndDate\\n    effectiveStartDate\\n    id\\n  }\\n  lat\\n  lon\\n  stops {\\n    name\\n    desc\\n    id\\n  }\\n}\\n\\nfragment SummaryPage_serviceTimeRange on serviceTimeRange {\\n  start\\n  end\\n}\\n\\nfragment SummaryPage_viewer_3rqNOH on QueryType {\\n  plan(fromPlace: $fromPlace, toPlace: $toPlace, intermediatePlaces: $intermediatePlaces, numItineraries: $numItineraries, transportModes: $modes, date: $date, time: $time, walkReluctance: $walkReluctance, walkBoardCost: $walkBoardCost, minTransferTime: $minTransferTime, walkSpeed: $walkSpeed, maxWalkDistance: $maxWalkDistance, wheelchair: $wheelchair, allowedTicketTypes: $ticketTypes, disableRemainingWeightHeuristic: $disableRemainingWeightHeuristic, arriveBy: $arriveBy, transferPenalty: $transferPenalty, bikeSpeed: $bikeSpeed, optimize: $optimize, itineraryFiltering: $itineraryFiltering, unpreferred: $unpreferred, allowedBikeRentalNetworks: $allowedBikeRentalNetworks, locale: $locale) {\\n    ...SummaryPlanContainer_plan\\n    ...ItineraryTab_plan\\n    itineraries {\\n      startTime\\n      endTime\\n      ...ItineraryTab_itinerary\\n      ...SummaryPlanContainer_itineraries\\n      legs {\\n        mode\\n        ...ItineraryLine_legs\\n        transitLeg\\n        legGeometry {\\n          points\\n        }\\n        route {\\n          gtfsId\\n          type\\n          shortName\\n          id\\n        }\\n        trip {\\n          gtfsId\\n          directionId\\n          stoptimesForDate {\\n            scheduledDeparture\\n            pickupType\\n          }\\n          pattern {\\n            ...RouteLine_pattern\\n            id\\n          }\\n          id\\n        }\\n        from {\\n          name\\n          lat\\n          lon\\n          stop {\\n            gtfsId\\n            zoneId\\n            id\\n          }\\n          bikeRentalStation {\\n            bikesAvailable\\n            networks\\n            id\\n          }\\n        }\\n        to {\\n          stop {\\n            gtfsId\\n            zoneId\\n            id\\n          }\\n          bikePark {\\n            bikeParkId\\n            name\\n            id\\n          }\\n        }\\n      }\\n    }\\n  }\\n}\\n\\nfragment SummaryPlanContainer_itineraries on Itinerary {\\n  ...ItinerarySummaryListContainer_itineraries\\n  endTime\\n  startTime\\n  legs {\\n    mode\\n    to {\\n      bikePark {\\n        bikeParkId\\n        name\\n        id\\n      }\\n    }\\n    ...ItineraryLine_legs\\n    transitLeg\\n    legGeometry {\\n      points\\n    }\\n    route {\\n      gtfsId\\n      id\\n    }\\n    trip {\\n      gtfsId\\n      directionId\\n      stoptimesForDate {\\n        scheduledDeparture\\n      }\\n      pattern {\\n        ...RouteLine_pattern\\n        id\\n      }\\n      id\\n    }\\n  }\\n}\\n\\nfragment SummaryPlanContainer_plan on Plan {\\n  date\\n  itineraries {\\n    startTime\\n    endTime\\n    legs {\\n      mode\\n      ...ItineraryLine_legs\\n      transitLeg\\n      legGeometry {\\n        points\\n      }\\n      route {\\n        gtfsId\\n        id\\n      }\\n      trip {\\n        gtfsId\\n        directionId\\n        stoptimesForDate {\\n          scheduledDeparture\\n          pickupType\\n        }\\n        pattern {\\n          ...RouteLine_pattern\\n          id\\n        }\\n        id\\n      }\\n      from {\\n        name\\n        lat\\n        lon\\n        stop {\\n          gtfsId\\n          zoneId\\n          id\\n        }\\n        bikeRentalStation {\\n          bikesAvailable\\n          networks\\n          id\\n        }\\n      }\\n      to {\\n        stop {\\n          gtfsId\\n          zoneId\\n          id\\n        }\\n        bikePark {\\n          bikeParkId\\n          name\\n          id\\n        }\\n      }\\n    }\\n  }\\n}\\n\",\r\n"
 					+ "    \"variables\": {\r\n"
-					+ "        \"fromPlace\": \""+ osoite2 +", City::" + kordinaatit2[0]+","+kordinaatit2[1]+"\",\r\n"
+					+ "        \"fromPlace\": \""+ osoite2 +", City::" + kordinaatit2[0] +","+ kordinaatit2[1] +"\",\r\n"
 					+ "        \"toPlace\": \"Koskelonkuja 1, Espoo::60.262691,24.724533\",\r\n"
 					+ "        \"intermediatePlaces\": [],\r\n"
 					+ "        \"numItineraries\": 5,\r\n"
@@ -84,7 +83,7 @@ public class DistanceEst {
 					+ "                \"mode\": \"WALK\"\r\n"
 					+ "            }\r\n"
 					+ "        ],\r\n"
-					+ "        \"date\": \"2022-11-14\",\r\n"
+					+ "        \"date\": \"2023-03-07\",\r\n"
 					+ "        \"time\": \"06:30:00\",\r\n"
 					+ "        \"walkReluctance\": 2,\r\n"
 					+ "        \"walkBoardCost\": 600,\r\n"
@@ -105,10 +104,11 @@ public class DistanceEst {
 					+ "        \"allowedBikeRentalNetworks\": [],\r\n"
 					+ "        \"locale\": \"fi\"\r\n"
 					+ "    }\r\n"
-					+ "}\r\n"
+					+ "}";
+					/*
 					+ "{\r\n"
-					+ "    \"fromPlace\": \""+ osoite2 +", City::"+ kordinaatit2[0]+","+kordinaatit2[1]+"\",\r\n"
-					+ "    \"toPlace\": \"Koskelonkuja 1, Espoo::60.262691,24.724533\",\r\n"
+					+ "    \"fromPlace\": \""+ osoite2 +", City::"+ kordinaatit2[0] +","+ kordinaatit2[1] +"\",\r\n"
+					+ "    \"toPlace\": \""ADDRESS", Espoo::60.262691,24.724533\",\r\n"
 					+ "    \"intermediatePlaces\": [],\r\n"
 					+ "    \"numItineraries\": 5,\r\n"
 					+ "    \"modes\": [\r\n"
@@ -128,7 +128,7 @@ public class DistanceEst {
 					+ "            \"mode\": \"WALK\"\r\n"
 					+ "        }\r\n"
 					+ "    ],\r\n"
-					+ "    \"date\": \"2022-11-06\",\r\n"
+					+ "    \"date\": \"2023-03-07\",\r\n"
 					+ "    \"time\": \"06:30:00\",\r\n"
 					+ "    \"walkReluctance\": 2,\r\n"
 					+ "    \"walkBoardCost\": 600,\r\n"
@@ -168,8 +168,8 @@ public class DistanceEst {
 					+ "]\r\n"
 					+ "{\r\n"
 					+ "    \"useUnpreferredRoutesPenalty\": 1200\r\n"
-					+ "}";
-
+					+ "}";*/
+			
 			byte[] out = payload.getBytes(StandardCharsets.UTF_8);
 			OutputStream stream = connection.getOutputStream();
 			stream.write(out);
@@ -415,11 +415,11 @@ public class DistanceEst {
 				  
 				  dimensioncollection.put(osoitteetPos , new TimeDataandAddr(osoite2, average , busses.get(osoitteetPos), sumtotalminutes2, weight));
 				  TimeDataandAddr getAddrobj = (TimeDataandAddr)dimensioncollection.get(osoitteetPos);
-				  System.out.println(getAddrobj.address);
-				  System.out.println(getAddrobj.Time);
-				  System.out.println(getAddrobj.busses);
-				  System.out.println(getAddrobj.CumulativeMinutesAttr);
-				  System.out.println(getAddrobj.weight);
+				  System.out.println("Startpoint: " + getAddrobj.address);
+				  System.out.println("Avg.time duration: " + getAddrobj.Time);
+				  System.out.println("Avg.Busses amount: " + getAddrobj.busses);
+				  System.out.println("Cumulated minutes:" + getAddrobj.CumulativeMinutesAttr);
+				  System.out.println("Weighted number: " + getAddrobj.weight);
 
 			}
 
@@ -434,13 +434,13 @@ public class DistanceEst {
 	public static void finalWriteOut_to_File(List<String> osoitteet) throws IOException {
 		
 		BufferedWriter writer = new BufferedWriter(new FileWriter("Addresses_and_averages.txt"));
-			
+
 		for(int aa = 0; aa < osoitteet.size(); aa++) {
 			
 			TimeDataandAddr getAddrobj = (TimeDataandAddr)dimensioncollection.get(aa);
 			
 			if (getAddrobj != null && writer != null) {
-				writer.write("Destination:"+getAddrobj.address+"\n"+"Avg.time duration:"+getAddrobj.Time+"\n"+"Busses amount:"+getAddrobj.busses+"\n"+"Cumulated minutes:"+getAddrobj.CumulativeMinutesAttr+"\n"+"Weighted number:"+getAddrobj.weight+"\n\n");
+				writer.write("Startpoint:"+getAddrobj.address+"\n"+"Avg.time duration:"+getAddrobj.Time+"\n"+"Avg.Busses amount:"+getAddrobj.busses+"\n"+"Cumulated minutes:"+getAddrobj.CumulativeMinutesAttr+"\n"+"Weighted number:"+getAddrobj.weight+"\n\n");
 				}
 			else {
 				continue;
@@ -450,7 +450,23 @@ public class DistanceEst {
 	
 	writer.flush();
 	writer.close();
+	}
+   public static void finalWriteOut_to_File_only_Addresses(List<String> osoitteet) throws IOException {
 		
+		BufferedWriter writer = new BufferedWriter(new FileWriter("Addresses.txt"));
+			
+		for(int f = 0; f < osoitteet.size(); f++) {
+			
+			if (osoitteet != null) {
+				
+				writer.write(f + osoitteet.get(f) +"\n");
+				
+				}
+			}
+	
+	writer.flush();
+	writer.close();
+	System.exit(0);
 	}
  }
 

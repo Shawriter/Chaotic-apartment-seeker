@@ -64,15 +64,15 @@ def readfile(minutesarvo):
 
         for line in f:
 
-            if "Destination" in line:
+            if "Startpoint" in line:
                 osoite = line.split(":")
                 osoitedict["Destination" + str(n)] = osoite[1]
                 n += 1
-            if "Avg.time" in line:
+            if "Avg.time duration" in line:
                 aika = line.split(":")
                 osoitedict["Avg.time" + str(n2)] = aika[1]
                 n2 += 1
-            if "Cumulated" in line:
+            if "Cumulated minutes" in line:
                 cumulated_mins = line.split(":")
                 osoitedict["Cumulatedminutes" + str(n3)] = cumulated_mins[1]
                 n3 += 1

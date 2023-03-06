@@ -1,15 +1,10 @@
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.File;
-
-import java.lang.ProcessBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,7 +24,7 @@ public class dataScra {
 	static final String host = "https://consent.google.com/save";
 	static final String host2 = "www.google.com";
 	
-	static ProcessBuilder pr = new ProcessBuilder();
+	
 	static String GoogleRequestReader;
 	static List<String> osoitteet = new ArrayList<String>();
 
@@ -42,18 +37,18 @@ public class dataScra {
 
 			driver.get(asuntohaku);
 			TimeUnit.SECONDS.sleep(3);
-
-			List<WebElement> asunlista = driver.findElements(By.xpath("//a[@ng-href]"));
 			
-
+			List<WebElement> asunlista = driver.findElements(By.xpath("//div[contains(@class, 'card-v2-text-container__text card-v2-text-container__text--bold')]")); //Get the address webelement textcontent
+			
 			int add = 1; 
-			for(WebElement i : asunlista) {
+			for(WebElement i : asunlista) { // Get the addresses from the webelement object list and pass them into WordScrambler that formats the addresses to be in an appropriate form for google maps
 				add += 1; 
 				String asunto = i.getAttribute("textContent");
 				String asunto2 = asunto.replaceAll("\\s+","");
-				//System.out.println(asunto2);
+				System.out.println(asunto2);
 				if(!asunto2.equals("Karttahaku")){
 					WordScrambler(asunto2, add);
+					System.out.println("In the loop");
 				}else{
 					add--;
 					continue;
@@ -82,9 +77,15 @@ public class dataScra {
 		
 		WebDriver driver_2 = new ChromeDriver();
 		
+		System.out.println("Press 'y' to write only the addresses in a text file without bus timetable data, else press 'n': ");
+		
+		Scanner in = new Scanner(System.in);
+		String promptVal = in.nextLine();
+		in.close();
+
 		driver_2.get(asuntohaku);
 		
-		TimeUnit.SECONDS.sleep(2);
+		TimeUnit.SECONDS.sleep(4);
 		List<WebElement> sivut = driver_2.findElements(By.xpath("//pagination-indication[contains(@class, 'ng-isolate-scope')]"));
 		
 		for(WebElement a : sivut) {
@@ -97,7 +98,7 @@ public class dataScra {
 				
 				sivujenmaara = sivuarr[sivuarr.length-1];
 				
-			//System.out.println(sivujenmaara);
+			System.out.println(sivujenmaara);
 			}
 		
 		}
@@ -110,10 +111,19 @@ public class dataScra {
 			s++;
 		}
 		driver_2.quit();
-	
-		osoitteetDistanEst();
+		System.out.println(osoitteet);
 		
-		
+		if (promptVal.equals("y")) {
+			
+			DistanceEst.finalWriteOut_to_File_only_Addresses(osoitteet);
+		}
+        if(promptVal.equals("n")) {
+        	
+        	osoitteetDistanEst();
+			System.out.println("Saved the end result to a text file. Exiting...");
+			System.exit(0);
+		}
+       
 	}
 	public static void WordScrambler(String TheAddress, int asunnot) throws Exception {
 		try {
@@ -156,7 +166,6 @@ public class dataScra {
 				}
 				String osoite = sb2.toString() + "+" + sb.toString();
 				
-				
 				if(!osoitteet.contains(osoite)){
 					osoitteet.add(osoite);
 				}
@@ -183,7 +192,7 @@ public class dataScra {
 	public static void osoitteetDistanEst() throws IOException, InterruptedException, Exception {
 
 
-		String AcceptHeaderContentType = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*///*;q=0.8";
+		// String AcceptHeaderContentType = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*///*;q=0.8";
 		String line;
 		BufferedReader Googlereader;
 		StringBuffer responseContent = new StringBuffer();
@@ -206,9 +215,7 @@ public class dataScra {
 	
 					while((line = Googlereader.readLine()) != null) {
 						responseContent.append(line);
-						
-	
-	
+
 					}
 	
 					connection2.disconnect();
@@ -221,15 +228,15 @@ public class dataScra {
 					
 					int osoitteetlength = osoitteet.size();
 					
+					System.out.println(kordinaatisto.toString());
+					
 					if(kordinaatisto !=null) {
 						DistanceEst.APIposter(osoite, kordinaatisto, osoitteet);
-					
-					}else {
-						continue;
-					}
-				}
+
+				 }
 	
 	
+			  }
 			}
 			catch(Exception e) {
 				
@@ -239,7 +246,7 @@ public class dataScra {
 			}
 		DistanceEst.finalWriteOut_to_File(osoitteet); //Writing the final results to a text file
 	}
-	public static String[] regexFinder(String googlemapsresponse2) {
+	public static String[] regexFinder(String googlemapsresponse2) { // Cheap geocoder method, scraping the coordinates from the server response
 
 		final String REGEX = "@\\d\\d\\.\\d\\d\\d\\d\\d\\d\\d\\,\\d\\d\\.\\d\\d\\d\\d\\d\\d";
 		String kordinaatti = null;
