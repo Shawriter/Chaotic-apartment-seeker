@@ -83,7 +83,7 @@ public class DistanceEst {
 					+ "                \"mode\": \"WALK\"\r\n"
 					+ "            }\r\n"
 					+ "        ],\r\n"
-					+ "        \"date\": \"2023-03-07\",\r\n"
+					+ "        \"date\": \"2023-03-12\",\r\n"
 					+ "        \"time\": \"06:30:00\",\r\n"
 					+ "        \"walkReluctance\": 2,\r\n"
 					+ "        \"walkBoardCost\": 600,\r\n"
@@ -410,6 +410,10 @@ public class DistanceEst {
 			float weight = average / sumtotalminutes2;
 			int osoitteetPos = osoitteet.indexOf(osoite2);
 			int osoitteetPosnull = -1;
+			/*System.out.println(osoitteetPos);
+			System.out.println(average);
+			System.out.println(osoite2);
+			System.out.println(sumtotalminutes2);*/
 			
 			if(osoitteetPos != osoitteetPosnull) {
 				  

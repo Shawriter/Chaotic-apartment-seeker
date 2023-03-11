@@ -6,10 +6,8 @@ apartment seeker. Will also use this to manipulate other data files. When the
 object structures are more anonymous/abstract. For now its specific for this
 one project..'''
 # Development notes---->
-# Assign structures and gridnode layout make a module
-# Ripplemodule ripple route google maps street sprite sheets
-# Shortest path and the area between addresses
-
+'''DONE Ripplemodule ripple route google maps street sprite sheets DONE with C and opengl'''
+# Shortest path and the area between addresses transposing between planes
 
 def main():
 
@@ -20,64 +18,108 @@ def main():
     except Exception as e:
         raise e
 
-
-def addtofinal_list(addrlist_1, avglist_2, cumulatedlist_3):
-
-    final_list = []
-    final_list_indexcalc = 0
-    # Unpacking dictionary and adding to the final_list
-    for addr in addrlist_1:
-        final_list.append(addr)
-        final_list_indexcalc += 1
-        if final_list_indexcalc <= 1:
-            final_list.append(avglist_2[0])
-            final_list.append(cumulatedlist_3[0])
-        else:
-            try:
-                final_list.append(avglist_2[0 + final_list_indexcalc])
-                final_list.append(cumulatedlist_3[0 + final_list_indexcalc])
-            except Exception:
-                break
-
-    # print(final_list)
-    write_to_file(final_list, addrlist_1, avglist_2, cumulatedlist_3)
-
-
 def readfile(minutesarvo):
 
     osoitedict = {}
-    osoite_list_1 = []
-    avgmin_list_2 = []
-    cumulatedmin_list_3 = []
-
-    bool = 0
+   
+    """bool = 0
     minbool = 0.0
-    arvocalc = 0
+    arvocalc = 0"""
     m = float(minutesarvo)
     n = 1
     n2 = 1
     n3 = 1
-
+    
     # Adding everything to a dictionary, this structure will be used later
-
+    # Assigning a flag to represent the value in which category the address and time belongs to greater or less than
     with open('Addresses_and_averages.txt', 'r') as f:
 
         for line in f:
 
             if "Startpoint" in line:
                 osoite = line.split(":")
-                osoitedict["Destination" + str(n)] = osoite[1]
+                osoitedict["Startpoint" + str(n)] = osoite[1]
                 n += 1
             if "Avg.time duration" in line:
                 aika = line.split(":")
-                osoitedict["Avg.time" + str(n2)] = aika[1]
+
+                if float(aika[1]) <= m:
+
+                    osoitedict["Avg.time" + str(n2)] = str(aika[1]) + "lessthan_flag" + str(n2) + "avg"
+                    osoitedict["Startpoint" + str(n-1)] = osoite[1] + "lessthan_flag" + str(n2) + "str"
+
+                if float(aika[1]) >= m:
+
+                    osoitedict["Avg.time" + str(n2)] = str(aika[1]) + "greaterthan_flag" + str(n2) + "avg"
+                    osoitedict["Startpoint" + str(n-1)] = osoite[1] + "greaterthan_flag" + str(n2) + "str"
                 n2 += 1
             if "Cumulated minutes" in line:
                 cumulated_mins = line.split(":")
-                osoitedict["Cumulatedminutes" + str(n3)] = cumulated_mins[1]
+                # osoitedict["Cumulatedminutes" + str(n3)] = cumulated_mins[1]
+                if float(aika[1]) <= m:
+
+                    osoitedict["Cumulatedminutes" + str(n3)] = str(cumulated_mins[1]) + "lessthan_flag" + str(n3) + "cumulated"
+                    
+                if float(aika[1]) >= m:
+
+                    osoitedict["Cumulatedminutes" + str(n3)] = str(cumulated_mins[1]) + "greaterthan_flag" + str(n3) + "cumulated"
+
                 n3 += 1
 
+    #print(osoitedict)
+    split_dict(osoitedict, m)
+    
+def split_dict(osoitedict, m):
+    
+    start_p_iter_less = 1
+    avg_iter_less = 1
+    cumulated_iter_less = 1
+    
+    osoite_list_lessthan = []
+    avgmin_list_lessthan = []
+    cumulatedmin_list_lessthan = []
+   
+    """osoite_list_greaterthan = []
+    avgmin_list_greaterthan = []
+    cumulatedmin_list_greaterthan = []"""
+    
+    # Append the values from the dictionary into their own lists
     for arvo in osoitedict.values():
+          
+        
+        if "lessthan_flag" in arvo:
+
+          arvo_2 = arvo.split("\nl")
+         
+          if "str" in arvo:
+
+            osoite_list_lessthan.append(arvo_2[0])
+            start_p_iter_less += 1
+
+          if "avg" in arvo:
+
+            avgmin_list_lessthan.append(arvo_2[0])
+            avg_iter_less += 1
+
+          if "cumulated" in arvo:
+
+            cumulatedmin_list_lessthan.append(arvo_2[0])
+            cumulated_iter_less += 1
+    
+    FinalList.to_final(osoite_list_lessthan, avgmin_list_lessthan, cumulatedmin_list_lessthan)
+
+    """print(osoite_list_lessthan)
+    print(avgmin_list_lessthan)
+    print(cumulatedmin_list_lessthan)
+    if "greaterthan_flag" in arvo:
+          
+          arvo_3 = arvo.split("greaterthan_flag" + str(n))
+          #print(arvo_3[0])
+          osoite_list_greaterthan.append(arvo_3[0])
+          avgmin_list_greaterthan.append(arvo_3[0])
+          cumulatedmin_list_greaterthan.append(arvo_3[0])"""
+
+    """for arvo in osoitedict.values():
 
         try:
             arvotofloat = float(arvo)
@@ -102,8 +144,14 @@ def readfile(minutesarvo):
                 osoite_list_1.append(arvo)
 
             continue
-    print(cumulatedmin_list_3)
-    addtofinal_list(osoite_list_1, avgmin_list_2, cumulatedmin_list_3)
+    print(cumulatedmin_list_3)"""
+    
+    
+    '''if m <= float(avgmin_list_greaterthan[0]):
+      addtofinal_list(osoite_list_lessthan, avgmin_list_lessthan, cumulatedmin_list_lessthan)
+
+    if m >= float(avgmin_list_lessthan[0]):
+      addtofinal_list(osoite_list_greaterthan, avgmin_list_greaterthan, cumulatedmin_list_greaterthan)'''
 
 
 def write_to_file(flist, addrs, avgmins, cumulated):
@@ -135,6 +183,28 @@ for txt:")
     except Exception as e:
         raise e
 
+class FinalList:
+
+            def to_final(addrlist_1, avglist_2, cumulatedlist_3):
+
+                final_list = []
+                final_list_indexcalc = 0
+                
+                for addr in addrlist_1:
+                    final_list.append(addr)
+                    final_list_indexcalc += 1
+                    if final_list_indexcalc <= 1:
+                        final_list.append(avglist_2[0])
+                        final_list.append(cumulatedlist_3[0])
+                    else:
+                        try:
+                            final_list.append(avglist_2[0 + final_list_indexcalc])
+                            final_list.append(cumulatedlist_3[0 + final_list_indexcalc])
+                        except Exception:
+                            break
+
+                
+                write_to_file(final_list, addrlist_1, avglist_2, cumulatedlist_3)
 
 if __name__ == "__main__":
     main()

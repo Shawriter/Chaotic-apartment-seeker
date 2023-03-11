@@ -17,6 +17,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 
 public class dataScra {
 
@@ -32,9 +34,11 @@ public class dataScra {
 
 		try {
 
-
-			WebDriver driver = new ChromeDriver();
-
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			WebDriver driver = new ChromeDriver(options);
+			
+			
 			driver.get(asuntohaku);
 			TimeUnit.SECONDS.sleep(3);
 			
@@ -48,7 +52,7 @@ public class dataScra {
 				System.out.println(asunto2);
 				if(!asunto2.equals("Karttahaku")){
 					WordScrambler(asunto2, add);
-					System.out.println("In the loop");
+					
 				}else{
 					add--;
 					continue;
@@ -75,7 +79,10 @@ public class dataScra {
 		char sivujenmaara = 0;
 		String asuntohaku = "https://asunnot.oikotie.fi/vuokra-asunnot?pagination="+sivulukema+"&locations=%5B%5B39,6,%22Espoo%22%5D%5D&price%5Bmax%5D=850&price%5Bmin%5D=690&roomCount%5B%5D=1&roomCount%5B%5D=2&roomCount%5B%5D=3&buildingType%5B%5D=1&buildingType%5B%5D=256&vendorType%5B%5D=private&cardType=101";
 		
-		WebDriver driver_2 = new ChromeDriver();
+		ChromeOptions options2 = new ChromeOptions();
+		options2.addArguments("--remote-allow-origins=*");
+		WebDriver driver_2 = new ChromeDriver(options2);
+		
 		
 		System.out.println("Press 'y' to write only the addresses in a text file without bus timetable data, else press 'n': ");
 		
