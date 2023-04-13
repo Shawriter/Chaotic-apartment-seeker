@@ -77,12 +77,11 @@ public class dataScra {
 		
 		String sivulukema = "1";
 		char sivujenmaara = 0;
-		String asuntohaku = "https://asunnot.oikotie.fi/vuokra-asunnot?pagination="+sivulukema+"&locations=%5B%5B39,6,%22Espoo%22%5D%5D&price%5Bmax%5D=850&price%5Bmin%5D=690&roomCount%5B%5D=1&roomCount%5B%5D=2&roomCount%5B%5D=3&buildingType%5B%5D=1&buildingType%5B%5D=256&vendorType%5B%5D=private&cardType=101";
+		String asuntohaku = "https://asunnot.oikotie.fi/vuokra-asunnot?pagination="+sivulukema+"&locations=%5B%5B39,6,%22Espoo%22%5D%5D&price%5Bmax%5D=850&price%5Bmin%5D=600&roomCount%5B%5D=1&roomCount%5B%5D=2&roomCount%5B%5D=3&buildingType%5B%5D=1&buildingType%5B%5D=256&vendorType%5B%5D=private&cardType=101";
 		
 		ChromeOptions options2 = new ChromeOptions();
 		options2.addArguments("--remote-allow-origins=*");
 		WebDriver driver_2 = new ChromeDriver(options2);
-		
 		
 		System.out.println("Press 'y' to write only the addresses in a text file without bus timetable data, else press 'n': ");
 		

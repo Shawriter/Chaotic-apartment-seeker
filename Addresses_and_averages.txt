@@ -1,0 +1,546 @@
+Startpoint:Linjaloistonkatu+3
+Avg.time duration:69.6
+Avg.Busses amount:3
+Cumulated minutes:348.0
+Weighted number:0.2
+
+Startpoint:Pohjanpolku+4
+Avg.time duration:58.8
+Avg.Busses amount:3
+Cumulated minutes:294.0
+Weighted number:0.2
+
+Startpoint:Kuutamokatu+6
+Avg.time duration:59.4
+Avg.Busses amount:3
+Cumulated minutes:297.0
+Weighted number:0.2
+
+Startpoint:Maininkitie+16
+Avg.time duration:64.0
+Avg.Busses amount:2
+Cumulated minutes:320.0
+Weighted number:0.2
+
+Startpoint:Merivalkama+12
+Avg.time duration:65.0
+Avg.Busses amount:3
+Cumulated minutes:325.0
+Weighted number:0.2
+
+Startpoint:Harakankuja+6
+Avg.time duration:44.0
+Avg.Busses amount:3
+Cumulated minutes:220.0
+Weighted number:0.2
+
+Startpoint:Niittyportti+2
+Avg.time duration:44.0
+Avg.Busses amount:2
+Cumulated minutes:220.0
+Weighted number:0.2
+
+Startpoint:Suviniitynkatu+
+Avg.time duration:34.8
+Avg.Busses amount:3
+Cumulated minutes:174.0
+Weighted number:0.2
+
+Startpoint:Iivisniemenkatu+4
+Avg.time duration:70.0
+Avg.Busses amount:2
+Cumulated minutes:350.0
+Weighted number:0.2
+
+Startpoint:Matinniitynkuja+1
+Avg.time duration:62.8
+Avg.Busses amount:3
+Cumulated minutes:314.0
+Weighted number:0.2
+
+Startpoint:Tornitaso+7
+Avg.time duration:61.4
+Avg.Busses amount:2
+Cumulated minutes:307.0
+Weighted number:0.2
+
+Startpoint:Kulovalkeantie+4
+Avg.time duration:48.2
+Avg.Busses amount:2
+Cumulated minutes:241.0
+Weighted number:0.2
+
+Startpoint:Reviisorinkatu+8
+Avg.time duration:48.2
+Avg.Busses amount:2
+Cumulated minutes:241.0
+Weighted number:0.2
+
+Startpoint:Viherkallionkuja+5
+Avg.time duration:27.0
+Avg.Busses amount:2
+Cumulated minutes:135.0
+Weighted number:0.2
+
+Startpoint:Iivisniemenkatu+2
+Avg.time duration:71.4
+Avg.Busses amount:2
+Cumulated minutes:357.0
+Weighted number:0.2
+
+Startpoint:Kompassikatu+9
+Avg.time duration:65.8
+Avg.Busses amount:2
+Cumulated minutes:329.0
+Weighted number:0.2
+
+Startpoint:Kilonportti+5
+Avg.time duration:42.0
+Avg.Busses amount:2
+Cumulated minutes:210.0
+Weighted number:0.2
+
+Startpoint:Kummelivuorentie+15
+Avg.time duration:66.2
+Avg.Busses amount:2
+Cumulated minutes:331.0
+Weighted number:0.19999999
+
+Startpoint:Merenkulkijankatu+3
+Avg.time duration:64.2
+Avg.Busses amount:2
+Cumulated minutes:321.0
+Weighted number:0.19999999
+
+Startpoint:Ajurinmäki+5
+Avg.time duration:46.8
+Avg.Busses amount:3
+Cumulated minutes:234.0
+Weighted number:0.2
+
+Startpoint:Sateentie+4
+Avg.time duration:46.8
+Avg.Busses amount:2
+Cumulated minutes:234.0
+Weighted number:0.2
+
+Startpoint:SateentieSateentie+4
+Avg.time duration:46.8
+Avg.Busses amount:2
+Cumulated minutes:234.0
+Weighted number:0.2
+
+Startpoint:Sunantie+12
+Avg.time duration:42.6
+Avg.Busses amount:2
+Cumulated minutes:213.0
+Weighted number:0.19999999
+
+Startpoint:SunantieSunantie+12
+Avg.time duration:42.6
+Avg.Busses amount:2
+Cumulated minutes:213.0
+Weighted number:0.19999999
+
+Startpoint:SunantieSunantieSunantie+12
+Avg.time duration:42.6
+Avg.Busses amount:3
+Cumulated minutes:213.0
+Weighted number:0.19999999
+
+Startpoint:Mäntyviita+4
+Avg.time duration:66.0
+Avg.Busses amount:1
+Cumulated minutes:330.0
+Weighted number:0.2
+
+Startpoint:Valakuja+6
+Avg.time duration:35.8
+Avg.Busses amount:1
+Cumulated minutes:179.0
+Weighted number:0.2
+
+Startpoint:Törmäniityntie+15
+Avg.time duration:33.0
+Avg.Busses amount:1
+Cumulated minutes:165.0
+Weighted number:0.2
+
+Startpoint:Tornitaso+1
+Avg.time duration:61.2
+Avg.Busses amount:1
+Cumulated minutes:306.0
+Weighted number:0.2
+
+Startpoint:Syvänsalmenkatu+3
+Avg.time duration:70.0
+Avg.Busses amount:2
+Cumulated minutes:350.0
+Weighted number:0.2
+
+Startpoint:Aapelinkatu+5
+Avg.time duration:67.6
+Avg.Busses amount:1
+Cumulated minutes:338.0
+Weighted number:0.19999999
+
+Startpoint:Kummelivuorentie+10
+Avg.time duration:69.6
+Avg.Busses amount:1
+Cumulated minutes:348.0
+Weighted number:0.2
+
+Startpoint:Tuomarilanportti+6
+Avg.time duration:44.4
+Avg.Busses amount:1
+Cumulated minutes:222.0
+Weighted number:0.2
+
+Startpoint:Nihtisillankuja+2
+Avg.time duration:44.4
+Avg.Busses amount:1
+Cumulated minutes:222.0
+Weighted number:0.2
+
+Startpoint:Kirstinharju+9
+Avg.time duration:38.8
+Avg.Busses amount:2
+Cumulated minutes:194.0
+Weighted number:0.2
+
+Startpoint:Visamäki+4
+Avg.time duration:49.0
+Avg.Busses amount:1
+Cumulated minutes:245.0
+Weighted number:0.2
+
+Startpoint:Ruutikatu+7
+Avg.time duration:50.4
+Avg.Busses amount:1
+Cumulated minutes:252.0
+Weighted number:0.2
+
+Startpoint:Menninkäisentie+5
+Avg.time duration:66.8
+Avg.Busses amount:2
+Cumulated minutes:334.0
+Weighted number:0.2
+
+Startpoint:Nelikkokuja+6
+Avg.time duration:59.2
+Avg.Busses amount:1
+Cumulated minutes:296.0
+Weighted number:0.2
+
+Startpoint:Merivirta+6
+Avg.time duration:59.0
+Avg.Busses amount:1
+Cumulated minutes:295.0
+Weighted number:0.2
+
+Startpoint:Ylismäenkuja+8
+Avg.time duration:53.0
+Avg.Busses amount:3
+Cumulated minutes:265.0
+Weighted number:0.2
+
+Startpoint:Matinraitti+7
+Avg.time duration:64.8
+Avg.Busses amount:3
+Cumulated minutes:324.0
+Weighted number:0.2
+
+Startpoint:Nelikkotie+12
+Avg.time duration:62.4
+Avg.Busses amount:2
+Cumulated minutes:312.0
+Weighted number:0.2
+
+Startpoint:Otsolahdentie+18
+Avg.time duration:61.0
+Avg.Busses amount:3
+Cumulated minutes:305.0
+Weighted number:0.2
+
+Startpoint:Jousenpuistonkatu+1
+Avg.time duration:54.6
+Avg.Busses amount:3
+Cumulated minutes:273.0
+Weighted number:0.19999999
+
+Startpoint:Länsiportti+4
+Avg.time duration:54.0
+Avg.Busses amount:2
+Cumulated minutes:270.0
+Weighted number:0.2
+
+Startpoint:Maininkitie+12
+Avg.time duration:54.0
+Avg.Busses amount:2
+Cumulated minutes:270.0
+Weighted number:0.2
+
+Startpoint:Linjaloistonkatu+7
+Avg.time duration:71.4
+Avg.Busses amount:2
+Cumulated minutes:357.0
+Weighted number:0.2
+
+Startpoint:Otsonkallio+3
+Avg.time duration:63.4
+Avg.Busses amount:2
+Cumulated minutes:317.0
+Weighted number:0.2
+
+Startpoint:Pellaksenmäentie+15
+Avg.time duration:23.4
+Avg.Busses amount:3
+Cumulated minutes:117.0
+Weighted number:0.2
+
+Startpoint:Pejinkuja+1
+Avg.time duration:23.4
+Avg.Busses amount:3
+Cumulated minutes:117.0
+Weighted number:0.2
+
+Startpoint:Tontunmäentie+31
+Avg.time duration:68.0
+Avg.Busses amount:3
+Cumulated minutes:340.0
+Weighted number:0.2
+
+Startpoint:Turuntie+22
+Avg.time duration:44.2
+Avg.Busses amount:3
+Cumulated minutes:221.0
+Weighted number:0.2
+
+Startpoint:Alakartanontie+2
+Avg.time duration:74.2
+Avg.Busses amount:2
+Cumulated minutes:371.0
+Weighted number:0.19999999
+
+Startpoint:Rajamännynkuja+5
+Avg.time duration:29.6
+Avg.Busses amount:2
+Cumulated minutes:148.0
+Weighted number:0.2
+
+Startpoint:Kuusiniementie+21
+Avg.time duration:31.4
+Avg.Busses amount:1
+Cumulated minutes:157.0
+Weighted number:0.2
+
+Startpoint:Madetie+3
+Avg.time duration:88.0
+Avg.Busses amount:3
+Cumulated minutes:440.0
+Weighted number:0.2
+
+Startpoint:Aapelinkatu+13
+Avg.time duration:63.6
+Avg.Busses amount:2
+Cumulated minutes:318.0
+Weighted number:0.19999999
+
+Startpoint:Peijinkuja+1
+Avg.time duration:70.8
+Avg.Busses amount:2
+Cumulated minutes:354.0
+Weighted number:0.2
+
+Startpoint:Ristiaallokonkatu+6
+Avg.time duration:63.0
+Avg.Busses amount:1
+Cumulated minutes:315.0
+Weighted number:0.2
+
+Startpoint:Kynäkatu+4
+Avg.time duration:47.8
+Avg.Busses amount:1
+Cumulated minutes:239.0
+Weighted number:0.2
+
+Startpoint:Pohjantie+2
+Avg.time duration:57.2
+Avg.Busses amount:3
+Cumulated minutes:286.0
+Weighted number:0.2
+
+Startpoint:Yläkartanontie+18
+Avg.time duration:70.6
+Avg.Busses amount:2
+Cumulated minutes:353.0
+Weighted number:0.2
+
+Startpoint:Linjaloistonkatu+5
+Avg.time duration:404.0
+Avg.Busses amount:2
+Cumulated minutes:0.0
+Weighted number:Infinity
+
+Startpoint:Suurpellonpuistokatu+9
+Avg.time duration:404.0
+Avg.Busses amount:1
+Cumulated minutes:0.0
+Weighted number:Infinity
+
+Startpoint:Ylismäentie+12
+Avg.time duration:52.0
+Avg.Busses amount:2
+Cumulated minutes:260.0
+Weighted number:0.2
+
+Startpoint:Everstinkuja+1
+Avg.time duration:48.4
+Avg.Busses amount:1
+Cumulated minutes:242.0
+Weighted number:0.2
+
+Startpoint:Lansankallionkuja+2
+Avg.time duration:51.4
+Avg.Busses amount:1
+Cumulated minutes:257.0
+Weighted number:0.2
+
+Startpoint:Ristiaallokonkatu+4
+Avg.time duration:61.0
+Avg.Busses amount:1
+Cumulated minutes:305.0
+Weighted number:0.2
+
+Startpoint:Aapelinkatu+10
+Avg.time duration:61.0
+Avg.Busses amount:1
+Cumulated minutes:305.0
+Weighted number:0.2
+
+Startpoint:ANKKURITIE+5
+Avg.time duration:68.2
+Avg.Busses amount:3
+Cumulated minutes:341.0
+Weighted number:0.19999999
+
+Startpoint:Niittykatu+3
+Avg.time duration:64.2
+Avg.Busses amount:2
+Cumulated minutes:321.0
+Weighted number:0.19999999
+
+Startpoint:Kalastajantie+3
+Avg.time duration:63.6
+Avg.Busses amount:3
+Cumulated minutes:318.0
+Weighted number:0.19999999
+
+Startpoint:Ahventie+3
+Avg.time duration:74.0
+Avg.Busses amount:2
+Cumulated minutes:370.0
+Weighted number:0.2
+
+Startpoint:LindaTannerinkuja+1
+Avg.time duration:74.0
+Avg.Busses amount:3
+Cumulated minutes:370.0
+Weighted number:0.2
+
+Startpoint:Ruutikatu+8
+Avg.time duration:47.0
+Avg.Busses amount:3
+Cumulated minutes:235.0
+Weighted number:0.2
+
+Startpoint:Leilankuja+6
+Avg.time duration:47.0
+Avg.Busses amount:3
+Cumulated minutes:235.0
+Weighted number:0.2
+
+Startpoint:Pohjantie+8
+Avg.time duration:59.8
+Avg.Busses amount:3
+Cumulated minutes:299.0
+Weighted number:0.2
+
+Startpoint:Viherkallionkuja+3
+Avg.time duration:29.0
+Avg.Busses amount:3
+Cumulated minutes:145.0
+Weighted number:0.2
+
+Startpoint:Viherlaaksonranta+10
+Avg.time duration:29.0
+Avg.Busses amount:3
+Cumulated minutes:145.0
+Weighted number:0.2
+
+Startpoint:Rauhalanpuisto+10
+Avg.time duration:59.4
+Avg.Busses amount:1
+Cumulated minutes:297.0
+Weighted number:0.2
+
+Startpoint:VanhaMuuralantie+2
+Avg.time duration:59.4
+Avg.Busses amount:1
+Cumulated minutes:297.0
+Weighted number:0.2
+
+Startpoint:Kaskenkaatajantie+10
+Avg.time duration:60.0
+Avg.Busses amount:1
+Cumulated minutes:300.0
+Weighted number:0.2
+
+Startpoint:Vanhamaantie+3
+Avg.time duration:60.0
+Avg.Busses amount:1
+Cumulated minutes:300.0
+Weighted number:0.2
+
+Startpoint:Eestinahde+4
+Avg.time duration:60.0
+Avg.Busses amount:2
+Cumulated minutes:300.0
+Weighted number:0.2
+
+Startpoint:Kastevuorenkuja+4
+Avg.time duration:72.2
+Avg.Busses amount:3
+Cumulated minutes:361.0
+Weighted number:0.19999999
+
+Startpoint:Kivenlahdenkatu+3
+Avg.time duration:62.8
+Avg.Busses amount:3
+Cumulated minutes:314.0
+Weighted number:0.2
+
+Startpoint:Lähderanta+5
+Avg.time duration:23.4
+Avg.Busses amount:3
+Cumulated minutes:117.0
+Weighted number:0.2
+
+Startpoint:KaarloSarkiankatu+10
+Avg.time duration:23.4
+Avg.Busses amount:3
+Cumulated minutes:117.0
+Weighted number:0.2
+
+Startpoint:Tyyrpuuri+2
+Avg.time duration:69.4
+Avg.Busses amount:2
+Cumulated minutes:347.0
+Weighted number:0.2
+
+Startpoint:Sammalkallionkuja+2
+Avg.time duration:54.2
+Avg.Busses amount:3
+Cumulated minutes:271.0
+Weighted number:0.2
+

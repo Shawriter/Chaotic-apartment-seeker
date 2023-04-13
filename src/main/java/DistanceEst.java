@@ -29,8 +29,9 @@ import org.json.JSONObject;
 
 public class DistanceEst {
 
-	final static String apiUrl = "https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql";
-	
+	// Find your subscription key by inspecting HSL Reittiopas network traffic
+	final static String apiUrl = "https://api.digitransit.fi/routing/v2/routers/hsl/index/graphql?digitransit-subscription-key?=ADD_YOUR_OWN_SUBSCRIPTION_KEY";
+
 	static List<Float> busTriplengthTotal = new ArrayList<Float>();
 	static List<Integer> busses = new ArrayList<Integer>();
 	static List<Integer> MinutesStartAndEndList = new ArrayList<Integer>();
@@ -83,7 +84,7 @@ public class DistanceEst {
 					+ "                \"mode\": \"WALK\"\r\n"
 					+ "            }\r\n"
 					+ "        ],\r\n"
-					+ "        \"date\": \"2023-03-12\",\r\n"
+					+ "        \"date\": \"2023-04-12\",\r\n"
 					+ "        \"time\": \"06:30:00\",\r\n"
 					+ "        \"walkReluctance\": 2,\r\n"
 					+ "        \"walkBoardCost\": 600,\r\n"
